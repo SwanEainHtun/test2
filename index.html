@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Data Management</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 500px; /* Adjusted width for better layout */
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #007bff; /* Blue heading */
+        }
+
+        .search-container {
+            display: flex;
+            margin-bottom: 20px; /* Space between search and form */
+        }
+
+        .search-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+        #companyList {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px; /* Space between list and form */
+        }
+
+        #companyList li {
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s; /* Smooth hover effect */
+        }
+
+        #companyList li:hover {
+            background-color: #e9ecef;
+        }
+
+        label {
+            display: block; /* Labels above inputs */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 12px); /* Account for padding */
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        button[type="submit"] {
+            background-color:#0056b3; /* Green submit button */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%; /* Full width button */
+        }
+
+        button[type="submit"]:hover {
+            background-color:#007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Local Company Information</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by company name">
+            <button type="button" onclick="searchCompanies()">Search</button>
+        </div>
+        <ul id="companyList"></ul>
+        <form id="companyForm">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+            <label for="section">Section:</label>
+            <input type="text" id="section" name="section" required>
+            <label for="division">Division:</label>
+            <input type="text" id="division" name="division" required>
+            <label for="sector">Sector:</label>
+            <input type="text" id="sector" name="sector" required>
+            <label for="industry">Industry:</label>
+            <input type="text" id="industry" name="industry" required>
+            <label for="coverSituation">Cover Situation:</label>
+            <input type="text" id="coverSituation" name="coverSituation" required>
+            
+            <button type="submit">Register New Company</button>
+        </form>
+    </div>
+</body>
+</html>
